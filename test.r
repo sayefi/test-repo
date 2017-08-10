@@ -12,4 +12,24 @@ hello <- "hello world"
 
 testData<-c(1:10)
 
-write.csv(testData,file="testoutput.csv",sep=",", eol="\n",row.names=FALSE)
+write.csv(testData,file="testoutput.csv", eol="\n",row.names=FALSE)
+
+
+a <-available.packages()
+
+write.csv(a,file="testoutput.csv", eol="\n",row.names=FALSE)
+
+head(a)
+str(a)
+a[Package="KernSmooth"]
+
+search()
+
+#find.package("devtools")
+#install.packages("devtools")
+
+library(devtools)
+find_rtools()
+
+find.package("KernSmooth")
+library(KernSmooth)
