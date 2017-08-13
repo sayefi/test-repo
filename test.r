@@ -33,3 +33,12 @@ find_rtools()
 
 find.package("KernSmooth")
 library(KernSmooth)
+
+testdata<-read.csv("C:/Users/sayef/Documents/testoutput.csv",header=TRUE)
+
+test2<-testdata[,c("Package","Version","License","Repository")]
+
+str(test2)
+head(data2)
+
+plot(test2)
