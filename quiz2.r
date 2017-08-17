@@ -1,6 +1,26 @@
 
 
+source("pollutantmean.r")
 
+## for data analysis changing the direcotry
+setwd("C:/Users/sayef/Documents/Data_Science/Projects/Air_pollusion")
+
+
+x<-pollutantmean("specdata", "sulfate", 1:10)
+x
+x<-pollutantmean("specdata", "nitrate", 70:72)
+x
+x<-pollutantmean("specdata", "sulfate", 34)
+x
+
+x<-pollutantmean("specdata", "nitrate")
+x
+
+source("complete.r")
+
+abc<-complete("specdata",4:10)
+
+abc
 
 x<-4
 class(x)
@@ -21,6 +41,7 @@ x+y
 
 # Set the working directory
 setwd("C:/Users/sayef/Documents/Data_Science/Projects/test-repo")
+
 
 ## Reading from file
 con<-file("hw1_data.csv","r")
@@ -61,8 +82,7 @@ mean(temp[!is.na(temp$Temp),]$Temp)
 
 ## What was the maximum ozone value in the month of May 
 temp<-quiz1_data[quiz1_data$Month==5,]
-mean(temp$Temp)
-mean(temp[!is.na(temp$Temp),]$Temp)
+max(temp[!is.na(temp$Ozone),]$Ozone)
 
 read.csv("hw1_data.csv",nrows=2)
 
