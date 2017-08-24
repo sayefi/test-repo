@@ -39,7 +39,20 @@ testdata<-read.csv("C:/Users/sayef/Documents/testoutput.csv",header=TRUE)
 test2<-testdata[,c("Package","Version","License","Repository")]
 
 
-str(test2)
+
 head(data2)
 
 plot(test2)
+
+
+system.time(str(test2))
+system.time({
+     for(i in 1:1000)
+          n<-i/(i+1)
+          print(n)
+})
+
+
+
+
+
